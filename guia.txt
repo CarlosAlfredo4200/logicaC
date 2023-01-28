@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=0OTpkPo__TY&ab_channel=LucasMoy
+
+min 44 Secuencias de escape
+
+Caracteres de modificacion
+
+
+%c unico Caracteres
+%d Entero
+%u Entero sin signo en base decimal
+%o Entero en base octal
+%x Entero en base hexadecimal
+%e Un número real en coma flotante, con exponente
+%f Un número real en coma flotante, sin exponente
+%s Cadena de caracteres
+%p Puntero de dirección memoria 
+
+-------------------------------------
+// Constantes:  #define NOMBRE valor;
+#define edad3 45;
+
+// Variables: Tipo NOMBRE = valor;
+	int edad = 43;
+	int edad2 = 3;
+
+	float sueldo = 25.456;
+	float bono = 4.560;
+-----------------------------------
+Secuencias de scape (Modificar mensajes)
+\0 Nulo
+\b Retroceso
+\t Tabulador
+\n Salto de linea
+\f  Salto de pag
+\r Retorno de carro
+\" Comillas
+\? Signo de interrogaciòn
+\\ Barra invertida
+
+-----------------Array declarar --------
+
+#define size 5;
+
+int main(int argc, char const *argv[])
+{
+    int array1[4];
+    int array2[size];
+    int array3[] = {1,2,3,4};
+    return 0;
+}
