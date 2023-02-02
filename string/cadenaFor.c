@@ -13,11 +13,11 @@ int main(int argc, char const *argv[])
         printf("\n%c", a[i]);
     }
 
-    -- -- -- -- --Ingresar la palabra contar caracter-- -- -- -- -- -
+    //-- -- -- -- --Ingresar la palabra contar caracter-- -- -- -- -- -
 
     char cadena[255];
     printf("\n\nIngresa la cadena : ");
-    gets(cadena);
+    scanf("%s",cadena);
 
     char *p;
     int caracteres = 0;
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 
     printf("\n\nLa cadena tiene :%i caracteres", caracteres);
 
-    -- -- -- -- --Ingresar frase contar palabras-- -- -- -- -- -
+    //-- -- -- -- --Ingresar frase contar palabras-- -- -- -- -- -
 
     
 

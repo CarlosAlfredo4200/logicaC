@@ -1,9 +1,26 @@
 https://www.youtube.com/watch?v=0OTpkPo__TY&ab_channel=LucasMoy
 
-min 44 Secuencias de escape
+instalar conpilador minGW min 10
+ 
+
+https://www.youtube.com/watch?v=p9YB4VRm5HQ&list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW&index=3&ab_channel=makigas%3Aaprendeaprogramar
+
+*   ir a file / descargar MinGW-W64 GCC-8.1.0 la ultima version / x86_64-posix-sjlj
+
+*   extraer en c / copiar ruta absoluta de bin / variables de entorino / nueva
+*   Desde consola : Revisar version = gcc --version
+*   extenciones vscode:
+    *code Runner
+    *C/C++
+
+*   en vscode new file / select lenguaje / guardar como /
+
+C es lenguaje imperativo NO AYUDA
+Programación procedimental(Funciones)
 
 Caracteres de modificacion
 
+Placeholder =   "%d", numero (Escribir o mostrar variables);
 
 %c unico Caracteres
 %d Entero
@@ -14,6 +31,19 @@ Caracteres de modificacion
 %f Un número real en coma flotante, sin exponente
 %s Cadena de caracteres
 %p Puntero de dirección memoria 
+%u Puntero de dirección memoria numero sin signo
+
+---------Asignaciones ------------
+
+Memoria temporal (Recurso manejable durante procesos)
+*   Variables:
+
+        forma de declarar = tipo nombre valor
+            char    = string;
+            enteros = short(16 bits) int(32 bits) long(64 bits) Unsingned(enorme) 
+            float   = 
+*   Identificadores
+
 
 -------------------------------------
 // Constantes:  #define NOMBRE valor;
@@ -22,6 +52,12 @@ Caracteres de modificacion
 // Variables: Tipo NOMBRE = valor;
 	int edad = 43;
 	int edad2 = 3;
+    
+    int y;
+
+    y = 25;
+    int z = 2 * y ;
+
 
 	float sueldo = 25.456;
 	float bono = 4.560;
@@ -37,6 +73,17 @@ Secuencias de scape (Modificar mensajes)
 \? Signo de interrogaciòn
 \\ Barra invertida
 
+-----------------Condicionales --------
+
+and = &&;
+or  = ||
+
+if (xxx){
+
+}
+else if(yyyy);
+
+switch:
 -----------------Array declarar --------
 
 #define size 5;
@@ -48,3 +95,94 @@ int main(int argc, char const *argv[])
     int array3[] = {1,2,3,4};
     return 0;
 }
+
+variables len array  = indicamos con variable la longitud SOLO DISPONIBLE G99
+
+----------- Estructuras   obj-----
+Agrupar datos que estan relacionados ente si
+
+declarar la estructura
+struct persona
+
+{
+    char nombre[30];
+    char apellido[30];
+    int    id;
+    float saldo;
+    
+
+}persona1 = {"Carlos", "Montoya" 0001, 110};
+
+----------- Estructuras union -----
+
+Estructura que comparte la misma direccion de memoria
+Dos punteros apuntando a la misma posición
+Puedo acceder de formas distintas
+NOTA : Tiene poco uso : * Para sistemas envevidos, convertir variable de 32 bits a 16 bits
+
+----------- Estructuras estru enumeradores -----
+
+Variables con multiples valores PERO siempre va retornar un index
+
+-----Punteros (direccion apsoluta del valor archivo)-----
+
+    Declarrar punteo con tipo datos: &nom_var
+    Guardar puntero int* dirx = %x => sacar direccion de memoria de x y fuardarlo en variable;
+
+    Para que sirve: Tabajar con referencia en Fn () => No una copia (el argumento hace copia);
+                    Los pointer permiten ahorro de memoria
+
+-----FUNCIONES DE BIBLIOTECAS-----
+<stdio.h>
+    print() = escribir
+    scanf() = leer mensajes
+    getchar()
+    putchar()
+
+<math.h>
+    sqrt() = 
+    pow()  = raiz
+    sin()  = seno
+    cos()
+
+<ctype.h>
+    isdigit(c) = es digito o no
+    isalpha(c) = si es letra
+
+
+--------- Memodia dinamica tradicional ----------
+
+    vla VS Memoria tradicional
+
+vla *SOLO disponible en C99
+vla *son variables locales y quedan almacenados en 
+    la pila del ordenador (posicion memoria pila), 
+    no podra ser muy grande.
+
+    *Mueren con la funcion
+
+Memoria dinamica se gestiona Manualmente, o sea,  
+liberarla cuando no la necesitemos.
+
+se utiliza: #include <stdlib.h>
+
+
+-------- Recusividad ---------------
+
+Técnica para ejecutar un n veces un conjunto de instrucciones.
+    Fn recursiva = Es cuando durante la ejecución se llama 
+                   directa o indirectamente a si misma.
+
+    Reglas: Toda función debe tener al menos:
+            *Una o mas llamadas a si misma.
+            * Una condición de corte con su respectiva solución trivial.(Brack, return, fin)
+            * Acercamiento a la condición de Condición de corte.
+            *Al llegar a la solución trivial, queda expresada la solución total.
+
+    NOTA : Tal vez pueda ser ineficiente por el consumo de recursos.
+
+    TIPOS DE RECURSIVIDAD:
+        *INDIRECTA (mutua): Fn a llama a Fn b que a su vez llama a Fn a.
+
+
+

@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// --------Crear prototipo de la funcion ------
 float funPromedio(float nota1, float nota2, float nota3);
 float aprobado(float promedio);
 int main()
@@ -20,6 +21,7 @@ int main()
     return 0;
 }
 
+// -------- crear la funcion y declararla ----------
 float funPromedio(float nota1, float nota2, float nota3)
 {
     float promedio;

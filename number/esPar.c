@@ -6,7 +6,7 @@ int main()
    printf("Ingresa el N°: ");
    scanf("%d",&num);
 
-   if (num%2 == 0)
+   if (num % 2 == 0)
    {
     printf("Es par");
    }
