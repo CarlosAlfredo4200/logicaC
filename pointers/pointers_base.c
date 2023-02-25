@@ -1,11 +1,11 @@
 #include <stdio.h>
 //  QUE ES PUNTERO?:   Direccion de memoria
 // Declarar los * mismo tipo de la variable
-    // int x = 10;
-    // int* dirX = &x;
+    int x = 10;
+    int* dirX = &x;
 
-    // float y= 20;
-    // float* dirY = &y;
+    float y= 20;
+    float* dirY = &y;
 
 int main()
 {   
