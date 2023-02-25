@@ -1,0 +1,14 @@
+/**
+* swap_int - function that swaps the values of two integers.
+* @a: this is the first entry
+* @b: this is the second entry
+*
+*
+*/
+
+1-swap number/intercambio
+2-strlen.c string/longitud cadena
+3-put.c = string/print cadena put
+4-print_rev.c /string/invertirCadena
+7-puts_half.c /string/partirCadena
+8-print_array.c /string/printArrayInt
