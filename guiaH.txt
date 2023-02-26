@@ -13,3 +13,4 @@
 7-puts_half.c /string/partirCadena
 8-print_array.c /string/printArrayInt
 9-strcpy.c /string / copiar cadena strcpy/
+100-atoi.c /string / atoi
