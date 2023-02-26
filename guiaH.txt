@@ -12,3 +12,4 @@
 4-print_rev.c /string/invertirCadena
 7-puts_half.c /string/partirCadena
 8-print_array.c /string/printArrayInt
+9-strcpy.c /string / copiar cadena strcpy/
