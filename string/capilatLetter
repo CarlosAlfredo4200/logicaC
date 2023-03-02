@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+/**
+ * main - check the code
+ * Write a function that capitalizes all words of a string.
+
+Prototype: char *cap_string(char *);
+Separators of words: space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }
+ * Return: Always 0.
+ */
+
+char *cap_string(char *);
+int main(void)
+{
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
+
+    ptr = cap_string(str);
+    printf("%s\n", ptr);
+    printf("%s\n", str);
+    return (0);
+}
+
+char *cap_string(char *cadena)
+{
+int i = 0;
+while (cadena[i])
+{
+while (!(cadena[i] >= 'a' && cadena[i] <='z'))
+i++;
+if (
+cadena[i - 1] == ' ' ||
+cadena[i - 1] == '\t' ||
+cadena[i - 1] == '\n' ||
+cadena[i - 1] == ',' ||
+cadena[i - 1] == ';' ||
+cadena[i - 1] == '.' ||
+cadena[i - 1] == '!' ||
+cadena[i - 1] == '?' ||
+cadena[i - 1] == '"' ||
+cadena[i - 1] == '(' ||
+cadena[i - 1] == ')' ||
+cadena[i - 1] == '{' ||
+cadena[i - 1] == '}' ||
+i == 0 )
+cadena[i] -=32;
+i++;
+ }
+return cadena;
+}
