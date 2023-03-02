@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[30] = "Hello ";
+    char b[20] = "Good morning!";
+
+    strncat(a, b, 3);//El 3 indica en Nº de carateres de la cadena 2 se van add
+    printf("%s\n", a); // Hello Goo
+    return 0;
+}
