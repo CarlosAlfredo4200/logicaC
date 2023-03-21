@@ -13,7 +13,7 @@ struct persona
 void mostrarPersona(struct persona p)
 {
     printf("Información del cliente :");
-    printf("El nombre es : %s", p.nombre);
+    printf("\nEl nombre es : %s", p.nombre);
     printf("\nEl la edad es : %d", p.edad);
     printf("\nEl su peso  es : %.2f", p.peso);
 }
@@ -21,6 +21,11 @@ void mostrarPersona(struct persona p)
 int main()
 {
 
+    struct persona pp
+    {
+       
+    };
+    
     mostrarPersona(persona1);
 
                 return 0;
