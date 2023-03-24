@@ -1,70 +1,59 @@
-#include "dog.h"
-#include <stdlib.h>
+#include "variadic_functions.h"
+#include <stdarg.h>
 #include <stdio.h>
 
 /**
- * new_dog - entry point
- * @name: string from main, name of pet
- * @age: number from main, age of pet
- * @owner: string from main, owner of pet
- * Return: p
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-
+void print_all(const char *const format, ...);
 int main(void)
 {
-    dog_t *my_dog;
-
-    my_dog = new_dog("Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    print_all("ceis", 'B', 3, "stSchool");
     return (0);
 }
 
-dog_t *new_dog(char *name, float age, char *owner)
+void print_all(const char *const format, ...)
 {
+    va_list parametros;
+    int n = 0, i = 0;
+    char *separator = ", ";
+    char *cadena;
 
-    dog_t *newDog_t;
-    int sizeName = 0;
-    int sizeOwner = 0;
-    int k, i;
+    va_start(parametros, format);
 
-    for (k = 0; name[sizeName] != '\0'; k++)
+    while (format && format[i])
+        i++;
+    while (format && format[n])
     {
-        sizeName++;
+        if (n == (i - 1))
+        {
+            separator = "";
+        }
+
+        switch (format[n])
+        {
+        case 'c':
+            printf("%c%s", va_arg(parametros, int), separator);
+            break;
+        case 'i':
+            printf("%d%s", va_arg(parametros, int), separator);
+            break;
+        case 'f':
+            printf("%f%s", va_arg(parametros, double), separator);
+            break;
+        case 's':
+            cadena = va_arg(parametros, char *);
+            if (cadena == NULL)
+            {
+            cadena = "(nil)";
+            }
+            printf("%s%s", cadena, separator);
+            break;
+        }
+        n++;
     }
-    for (i = 0; owner[sizeOwner] != '\0'; i++)
-    {
-        sizeOwner++;
-    }
-
-    newDog_t = malloc(sizeof(dog_t));
-    if (newDog_t == NULL)
-        return (NULL);
-
-    newDog_t->name = malloc(sizeName * sizeof(newDog_t->name));
-    if (newDog_t->name == NULL)
-    {
-        return (NULL);
-    }
-        free(newDog_t->name);
-
-    for (k = 0; k < sizeName; k++)
-        newDog_t->name[k] = name[k];
-
-    newDog_t->age = age;
-
-    newDog_t->owner = malloc(sizeOwner * sizeof(char));
-    if (newDog_t->owner == NULL)
-    {
-        return (NULL);
-    }
-    free(newDog_t->owner);
-    for (k = 0; k < sizeOwner; k++)
-    {
-        newDog_t->owner[k] = owner[k];
-    }
-
-    return (newDog_t);
+    printf("\n");
+    va_end(parametros);
 }
-
-
- 
