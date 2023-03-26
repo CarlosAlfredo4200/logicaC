@@ -14,7 +14,7 @@ int main()
  union mi_union u;
  u.entero = 10;
 
- ---Cambia toda las variables --- OJO
+ //---Cambia toda las variables --- OJO
  u.flotante = 33;
  printf("%d", u.entero);
 

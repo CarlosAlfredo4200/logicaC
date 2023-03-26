@@ -1,14 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+ struct point
+   {
+    int x;
+    int y;
+    
+   };
 int main()
 {
     
-    // float* = valores = (float*)  malloc(4000 * sizeof(float));
+   struct point p = {3,7};
+   struct point *p = &p;
+   int a =  p->y  = 98;
 
-    int n = 98;
-    int *p = &n;
+  
 
-    printf("%d", n);
+   
+
+    printf("%d", a);
     return 0;
 }
+ 
