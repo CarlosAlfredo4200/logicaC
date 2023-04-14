@@ -31,7 +31,6 @@ void print_all(const char *const format, ...)
         {
             separator = "";
         }
-
         switch (format[n])
         {
         case 'c':
@@ -47,7 +46,7 @@ void print_all(const char *const format, ...)
             cadena = va_arg(parametros, char *);
             if (cadena == NULL)
             {
-            cadena = "(nil)";
+                cadena = "(nil)";
             }
             printf("%s%s", cadena, separator);
             break;
@@ -56,4 +55,7 @@ void print_all(const char *const format, ...)
     }
     printf("\n");
     va_end(parametros);
+
+
+    printf("%d", 6);
 }
