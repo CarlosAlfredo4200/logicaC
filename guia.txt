@@ -186,3 +186,21 @@ Técnica para ejecutar un n veces un conjunto de instrucciones.
 
 
 
+void kash_exit(char **args) {
+  exit(0);
+}
+
+void kash_help(char **args) {
+    char *helptext =
+        "Kash - the Kinda Aimless Shell. "
+        "The following commands are built in:\n"
+        "  cd       Change the working directory.\n"
+        "  exit     Exit the shell.\n"
+        "  help     Print this help text.\n"
+        ;
+    printf("%s", helptext);
+}
+
+
+error: unused parameter 'args' [-Werror=unused-parameter]
+ void kash_exit(char **args) 
